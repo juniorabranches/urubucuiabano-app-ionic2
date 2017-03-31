@@ -1,0 +1,41 @@
+<ion-header>
+
+  <ion-navbar color="primary">
+    <ion-title text-center>{{dados.title}}</ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+<ion-content padding class="background">
+
+  <ion-card class="card-principal">
+    <ion-item color="primary">
+      <ion-icon name="md-call" item-left></ion-icon>
+      <ion-label>{{dados.phone}}</ion-label>
+    </ion-item>
+
+    <ion-item color="dark">
+      <ion-icon name="" item-left></ion-icon>
+      <ion-label color="light">{{dados.phone1}}</ion-label>
+    </ion-item>
+
+    <ion-card-content class="card-content">
+      <br>
+      <p color="light">
+        {{dados.description}}
+      </p>
+      <br>
+      <p color="light">
+        {{dados.description1}}
+      </p>
+    </ion-card-content>
+
+    <ion-item color="dark">
+      <label color="light">Redes Sociais</label>
+      <ion-icon color="light" (click)="openApp('https://www.facebook.com/URUBU-CUIABANO-TUC-EMBAIXADA-DA-NAÇÃO-FLA-CUIABÁ-122210361188939/')" name="logo-facebook" md="logo-facebook" item-right></ion-icon>
+    </ion-item>
+  </ion-card>
+
+  <!--<img class="card-principal" src="{{dados.img}}" alt="">-->
+
+</ion-content>

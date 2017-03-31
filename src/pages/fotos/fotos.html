@@ -1,0 +1,31 @@
+<ion-header>
+
+  <ion-navbar color="primary">
+    <ion-title text-center>{{dados.title}}</ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+<ion-content padding class="background">
+
+  <ion-card class="card-principal">
+
+    <ion-slides pager>
+
+      <ion-slide *ngFor="let foto of fotos" parallax>
+        <img src="{{foto.url}}" alt="">
+
+        <br><br>
+        <div class="card-principal">
+
+          <p>{{foto.data}}</p>
+          <p>{{foto.comment}}</p>
+
+        </div>
+      </ion-slide>
+
+    </ion-slides>
+
+  </ion-card>
+
+</ion-content>

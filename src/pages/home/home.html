@@ -1,0 +1,11 @@
+<ion-content padding class="background" class="card-background-page">
+
+  <ion-card *ngFor="let menu of menus">
+    <div  (click)="openPage(menu.menu, menu)">
+      <img src="{{menu.img}}"/>
+      <div class="card-title">{{menu.title}}</div>
+      <div class="card-subtitle">{{menu.subtitle}}</div>
+    </div>
+  </ion-card>
+
+</ion-content>
