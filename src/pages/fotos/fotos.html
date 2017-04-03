@@ -8,24 +8,18 @@
 
 <ion-content padding class="background">
 
-  <ion-card class="card-principal">
 
-    <ion-slides pager>
 
-      <ion-slide *ngFor="let foto of fotos" parallax>
-        <img src="{{foto.url}}" alt="">
 
-        <br><br>
-        <div class="card-principal">
+    <ion-grid>
+      <ion-row *ngFor="let row of grid">
+        <ion-col width-50 *ngFor="let file_uri of row">
+          <img [src]="file_uri.url" (click)="openImage(file_uri.url)">
+        </ion-col>
+      </ion-row>
+    </ion-grid>
 
-          <p>{{foto.data}}</p>
-          <p>{{foto.comment}}</p>
+  
 
-        </div>
-      </ion-slide>
-
-    </ion-slides>
-
-  </ion-card>
 
 </ion-content>

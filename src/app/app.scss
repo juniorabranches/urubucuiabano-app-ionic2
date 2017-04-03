@@ -20,3 +20,30 @@
   -moz-background-size: cover;
   background-size: cover;
 }
+
+.buttonDefault {
+  width: 100%;
+  border-radius: 30px;
+  color: white;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 18px;
+  border: 1px solid #fff;
+  background-color: #b30404;
+
+
+    box-shadow: 0 10px 20px rgba(0,0,0,0.19), 0 6px 6px rgba(0,0,0,0.23); //0 3px 0 #b30404;
+
+    &:active{
+          position:relative;
+          top:3px;
+          box-shadow:none;
+    }
+
+}
+
+.customInputs {
+  font-size: 16px;
+}

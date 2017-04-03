@@ -1,0 +1,25 @@
+<ion-header>
+
+  <ion-navbar color="primary">
+    <ion-title text-center>Fotos</ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+<ion-content padding class="background">
+
+
+  <ion-card class="card-principal">
+
+    <img src="{{foto}}" alt="">
+
+  </ion-card>
+
+  <ion-row>
+    <ion-col>
+      <button icon-left  ion-button class="buttonDefault" (click)='backButton()'><ion-icon name="md-camera"></ion-icon>Voltar</button>
+    </ion-col>
+  </ion-row>
+
+
+</ion-content>

@@ -1,0 +1,52 @@
+<ion-header>
+
+  <ion-navbar color="primary">
+    <ion-title text-center>Chat da TUC</ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+<ion-content padding class="background">
+
+      <ion-card>
+
+        <ion-row>
+          <ion-thumbnail item-center>
+            <img class="imgUser" src={{userPhoto}} style="width:40px">
+          </ion-thumbnail>          
+          <ion-item>
+            <ion-label>Nome</ion-label>
+            <ion-input disabled="true" [(ngModel)]="userName" type="text"></ion-input>
+          </ion-item>
+        </ion-row>
+        <ion-item>
+          <ion-label>Comentário</ion-label>
+          <ion-textarea style="height:70px" [(ngModel)]="sugestion"  type="text"></ion-textarea>
+        </ion-item>
+        <button ion-button icon-left block color="facebookColor" class="buttonEnviar" (click)="sendMessage(userName, userPhoto, null, sugestion)"  ><ion-icon name="md-football"></ion-icon>Enviar</button>
+
+      </ion-card>
+      <div *ngFor="let item of suggestions; let i=index">
+        <ion-card *ngIf="i<=numberMsgs">
+
+            <ion-item>
+              <ion-avatar item-left>
+                <img src="{{item.photo}}">
+              </ion-avatar>
+              <h2>{{item.user}}</h2>
+              <p> {{item.date}} - {{item.hour}}:{{item.minutes}}:{{item.seconds}}</p>
+            </ion-item>
+
+            <ion-card-content>
+              <p color="light">{{item.sugestion}}</p>
+            </ion-card-content>
+
+
+        </ion-card>
+      </div>
+
+</ion-content>
+
+<ion-footer bottom>
+  <button *ngIf="numberMsgs<allMsgs" icon-left ion-button (click)="moreMessages(5)" class="buttonMoreMsgs">  <ion-icon icon-right name="md-add-circle"></ion-icon>Mais Mensagens</button>
+</ion-footer>

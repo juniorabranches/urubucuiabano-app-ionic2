@@ -1,8 +1,8 @@
 import { Component } from '@angular/core';
 import { NavController } from 'ionic-angular';
 
-import { FirebaseService } from '../../providers/providers';
-import { ATorcida, Brindes, Fotos, Midia, ProximosJogos, Contato } from '../pages';
+import { FirebaseService, FacebookLogin } from '../../providers/providers';
+import { ATorcida, Brindes, Fotos, Midia, ProximosJogos, Contato, Chat, Sede } from '../pages';
 
 
 @Component({
@@ -33,6 +33,26 @@ export class HomePage {
       this.navCtrl.push(Midia, {dados: dadosPag});
     } else if (page === 'contato') {
       this.navCtrl.push(Contato, {dados: dadosPag});
+    } else if (page === 'sede') {
+      this.navCtrl.push(Sede, {dados: dadosPag});
+    } else if (page === 'chat') {
+        FacebookLogin.login(response => {
+            this.fire.login(response.accessToken, () => {
+              console.log('ok');
+              this.navCtrl.push(Chat,  {imagem: this.fire.user.photo,
+                                        name: this.fire.user.name,
+                                        id : this.fire.user.id
+                                        });
+            }, error => {
+              alert("Para acessar o Chat da TUC, entre com o Facebook");
+            })
+
+
+        }, error => {
+          alert("Para acessar o Chat da TUC, entre com o Facebook");
+        });
+
+
     }
 
   }

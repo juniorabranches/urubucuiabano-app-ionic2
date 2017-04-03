@@ -4,3 +4,6 @@ export * from './fotos/fotos';
 export * from './midia/midia';
 export * from './proximosJogos/proximosJogos';
 export * from './contato/contato';
+export * from './chat/chat';
+export * from './sede/sede';
+export * from './viewFotos/viewFotos';

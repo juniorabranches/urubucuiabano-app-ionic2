@@ -5,14 +5,14 @@ import { InAppBrowser } from 'ionic-native';
 import { FirebaseService } from '../../providers/providers';
 
 @Component({
-  selector: 'page-contato',
-  templateUrl: 'contato.html'
+  selector: 'page-sede',
+  templateUrl: 'sede.html'
 })
-export class Contato {
+export class Sede {
 
   dados:any;
-  telefone;
   nome;
+  mensagem;
 
 
   constructor(public navCtrl: NavController, public viewCtrl: ViewController, public fire: FirebaseService, public params: NavParams) {
@@ -21,7 +21,7 @@ export class Contato {
   }
 
   clearCampos(){
-    this.telefone = '';
+    this.mensagem = '';
     this.nome = '';
   }
 
@@ -49,9 +49,9 @@ export class Contato {
   }
 
 
-  sendTel(nome, tel){
-    this.fire.saveTel(nome,tel);
-    this.fire.toastMessage('Solicitação enviada. Em breve você será adicionado no Whatsapp da TUC', 3000);
+  sendMensagem(nome, mensagem){
+    this.fire.saveMensagem(nome,mensagem);
+    this.fire.toastMessage('SRN! Sua mensagem foi enviada. Obrigado', 3000);
     this.clearCampos();
   }
 }
