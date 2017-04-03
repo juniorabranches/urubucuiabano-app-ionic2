@@ -8,5 +8,5 @@
 * OneSignal (Push Notifications) 
 
 # Play Store
-
-https://play.google.com/store/apps/details?id=br.com.abranches.urubucuiabano
+ ![https://play.google.com/store/apps/details?id=br.com.abranches.urubucuiabano](https://lh3.googleusercontent.com/mF_D6OplskmVomQ4PUHhhsLWUMkkjkIoj4TmTmiXw4rxpWAufDC_om6BVr_MwvlXfTg=h80-rw)
+* https://play.google.com/store/apps/details?id=br.com.abranches.urubucuiabano
