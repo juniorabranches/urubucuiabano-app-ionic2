@@ -6,3 +6,7 @@
 * Angular 2 
 * Firebase 
 * OneSignal (Push Notifications) 
+
+# Play Store
+
+https://play.google.com/store/apps/details?id=br.com.abranches.urubucuiabano
