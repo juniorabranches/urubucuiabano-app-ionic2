@@ -2,7 +2,7 @@ import { Component } from '@angular/core';
 import { NavController } from 'ionic-angular';
 
 import { FirebaseService, FacebookLogin } from '../../providers/providers';
-import { ATorcida, Brindes, Fotos, Midia, ProximosJogos, Contato, Chat, Sede } from '../pages';
+import { ATorcida, Brindes, Fotos, Midia, ProximosJogos, Contato, Chat, Sede, Elenco } from '../pages';
 
 
 @Component({
@@ -35,6 +35,8 @@ export class HomePage {
       this.navCtrl.push(Contato, {dados: dadosPag});
     } else if (page === 'sede') {
       this.navCtrl.push(Sede, {dados: dadosPag});
+    } else if (page === 'elenco') {
+      this.navCtrl.push(Elenco, {dados: dadosPag});      
     } else if (page === 'chat') {
         FacebookLogin.login(response => {
             this.fire.login(response.accessToken, () => {

@@ -9,11 +9,11 @@ import firebase from 'firebase';
 export class FirebaseService {
 
   user: any = {};
-  public baseUrl = '//URL DO FIREBASE';
+  public baseUrl = 'SUA URL DO FIREBASE';
 
   constructor(public http: Http, private toast: ToastController) {
     var config = {
-	//CONFIGURACAO DO FIREBASE
+    	SUA CONFIGURACAO DO FIREBASE
     };
     firebase.initializeApp(config);
   }
@@ -27,6 +27,10 @@ export class FirebaseService {
     });
     toast.present();
   }
+
+  checkNetwork(): boolean {
+    return navigator.onLine
+  }  
 
   public getMenus(){
     return new Promise(resolve => {

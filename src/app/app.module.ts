@@ -5,13 +5,13 @@ import { StatusBar } from '@ionic-native/status-bar';
 import { SplashScreen } from '@ionic-native/splash-screen';
 
 import { HomePage } from '../pages/home/home';
-import { ATorcida, Brindes, Fotos, Midia, ProximosJogos, Contato, Chat, Sede, ViewFotos } from '../pages/pages';
+import { ATorcida, Brindes, Fotos, Midia, ProximosJogos, Contato, Chat, Sede, ViewFotos, Elenco } from '../pages/pages';
 import {FirebaseService, OneSignal, FacebookLogin } from '../providers/providers';
 
 @NgModule({
   declarations: [
     MyApp,
-    HomePage, ATorcida, Brindes, Fotos, Midia, ProximosJogos, Contato, Chat, Sede, ViewFotos
+    HomePage, ATorcida, Brindes, Fotos, Midia, ProximosJogos, Contato, Chat, Sede, ViewFotos, Elenco
   ],
   imports: [
     IonicModule.forRoot(MyApp)
@@ -19,7 +19,7 @@ import {FirebaseService, OneSignal, FacebookLogin } from '../providers/providers
   bootstrap: [IonicApp],
   entryComponents: [
     MyApp,
-    HomePage, ATorcida, Brindes, Fotos, Midia, ProximosJogos, Contato, Chat, Sede, ViewFotos
+    HomePage, ATorcida, Brindes, Fotos, Midia, ProximosJogos, Contato, Chat, Sede, ViewFotos, Elenco
   ],
   providers: [
     StatusBar,

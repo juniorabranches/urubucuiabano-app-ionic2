@@ -7,3 +7,4 @@ export * from './contato/contato';
 export * from './chat/chat';
 export * from './sede/sede';
 export * from './viewFotos/viewFotos';
+export * from './elenco/elenco';
