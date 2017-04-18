@@ -1,0 +1,94 @@
+<ion-header>
+
+  <ion-navbar color="primary">
+    <ion-title text-center>{{dados.tournamentName}}</ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+<ion-content class="background">
+
+  <div *ngIf="isLibertadores">
+    <ion-toolbar color="dark"> <ion-title>{{dados.tournamentSub}}</ion-title></ion-toolbar>
+    <ion-list>
+
+        <ion-item *ngFor="let standing of standings" class="jogos" color="primary">
+            <ion-row>
+                <ion-thumbnail item-left>
+                  <img src={{standing.team1shedule}} style="width:60px">
+                </ion-thumbnail>
+                <p>{{standing.team1}}</p>
+            </ion-row>
+            <h3 *ngIf="standing.deleted" class="eliminado" color="white">ELIMINADO</h3>
+            <ion-row>
+              <ion-col>
+                <ion-badge color="saldoGols">PTS.</ion-badge>
+              </ion-col>
+              <ion-col>
+                <ion-badge color="saldoGols">JGS.</ion-badge>
+              </ion-col>
+                <ion-col>
+                  <ion-badge color="vitoria" >VIT.</ion-badge>
+                </ion-col>
+                <ion-col>
+                  <ion-badge color="empate" >EMP.</ion-badge>
+                </ion-col>
+                <ion-col>
+                  <ion-badge color="derrota" >DER.</ion-badge>
+                </ion-col>
+                <ion-col>
+                  <ion-badge color="saldoGols">SG.</ion-badge>
+                </ion-col>
+            </ion-row>
+            <ion-row>
+                <ion-col>
+                    <p>{{standing.pontos}}</p>
+                </ion-col>
+                <ion-col>
+                    <p>{{standing.jogos}}</p>
+                </ion-col>
+                <ion-col>
+                    <p>{{standing.vitorias}}</p>
+                </ion-col>
+                <ion-col>
+                    <p>{{standing.empates}}</p>
+                </ion-col>
+                <ion-col>
+                    <p>{{standing.derrotas}}</p>
+                </ion-col>
+                <ion-col>
+                    <p>{{standing.saldoGols}}</p>
+                </ion-col>
+            </ion-row>
+        </ion-item>
+    </ion-list>
+
+  </div>
+
+
+  <div *ngIf="!isLibertadores">
+    <ion-item *ngFor="let game of games" class="jogos" color="primary">
+        <ion-row style="height:80px">
+          <ion-col class="X" width-15 text-center>
+            <p>{{game.date}}</p>
+            <p>{{game.hour}}</p>
+          </ion-col>
+          <ion-col width-30 text-center>
+            <img  src={{game.team1shedule}} style="width:40px">
+            <p>{{game.team1}}</p>
+            <!--<ion-badge [color]="getScoreDisplayBadgeClass1(games)">{{games.team1score}}</ion-badge>-->
+          </ion-col>
+          <ion-col  class="X" width-10 text-center>
+            <img src="./assets/img/X.png" style="width:40px">
+          </ion-col>
+          <ion-col width-35 text-center>
+            <img src={{game.team2shedule}} style="width:40px">
+            <p>{{game.team2}}</p>
+            <!--<ion-badge [color]="getScoreDisplayBadgeClass2(games)">{{games.team2score}}</ion-badge>-->
+          </ion-col>
+        </ion-row>
+    </ion-item>
+  </div>
+
+
+</ion-content>

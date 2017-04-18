@@ -1,0 +1,30 @@
+<ion-header>
+
+  <ion-navbar color="primary">
+    <ion-title text-center>{{dados.title}}</ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+<ion-content class="background">
+
+  <ion-list>
+
+  <ion-item *ngFor="let classi of classificacao" class="jogos" color="primary" (click)="itemTapped($event, classi)">
+
+
+      <img src={{classi.tournamentImg}} class="campeonato" style="width:auto">
+
+      <ion-item color="dark" class="texto">
+        <p>{{classi.tournamentName}}</p>
+      </ion-item>
+      <br>
+      <h3 class="texto">{{classi.lugar}}</h3>
+      <br>
+      <button ion-button clear item-right color="dark"><ion-icon name="md-arrow-forward"></ion-icon></button>
+
+  </ion-item>
+
+</ion-list>
+
+</ion-content>

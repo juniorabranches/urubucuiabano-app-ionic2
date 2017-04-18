@@ -8,3 +8,6 @@ export * from './chat/chat';
 export * from './sede/sede';
 export * from './viewFotos/viewFotos';
 export * from './elenco/elenco';
+export * from './classificacao/classificacao';
+export * from './classificacaoDetalhes/classificacaoDetalhes';
+export * from './cartola/cartola';

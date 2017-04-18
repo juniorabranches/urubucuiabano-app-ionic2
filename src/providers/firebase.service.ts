@@ -9,12 +9,12 @@ import firebase from 'firebase';
 export class FirebaseService {
 
   user: any = {};
-  public baseUrl = 'SUA URL DO FIREBASE';
+  public baseUrl = 'URL FIREBASE';
 
   constructor(public http: Http, private toast: ToastController) {
     var config = {
-    	SUA CONFIGURACAO DO FIREBASE
-    };
+	{{CONFIG FIREBASE}}
+	};
     firebase.initializeApp(config);
   }
 
